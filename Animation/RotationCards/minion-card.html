@@ -18,6 +18,11 @@
           transform: translate(-50%, -50%); 
         }
 
+         @keyframes rotate{
+            from {transform: rotateX(-20deg) rotateY(0deg);}
+            to{ transform: rotateX(-20deg) rotateY(360deg);}
+        }
+
         .axis{
             position: absolute;
             top: -50%;
@@ -30,7 +35,7 @@
             animation: rotate 5s infinite linear;
         }
 
-        .item{
+        .card{
             /*띄워야 겹칩*/
             position: absolute;
             margin-left: -100px;
@@ -40,7 +45,7 @@
             z-index: 100;
             /*backface-visibility: hidden;*/
         }
-        /*.item::before{
+        /*.card::before{
             content: "";
             width: 100px;
             height: 100px;
@@ -56,47 +61,41 @@
             background: black;
         }
 
-   
-        .item:nth-child(1){transform: rotateY(0deg) translateZ(200px);}
+        .card:nth-child(1){transform: rotateY(0deg) translateZ(200px);}
         .back:nth-child(2){transform: rotateY(0deg) translateZ(200px);}
-        /*.item:nth-child(1)::after{transform: rotateY(0deg) translateZ(300px;)}*/
+        /*.card:nth-child(1)::after{transform: rotateY(0deg) translateZ(300px;)}*/
         
         
-        /*.item1:nth-child(2){transform: rotateY(180deg) translateZ(200px);}*/
+        /*.card1:nth-child(2){transform: rotateY(180deg) translateZ(200px);}*/
         /*.back:nth-child(4){transform: rotateY(60deg) translateZ(300px);}*/
-        /*.item:nth-child(3){transform: rotateY(120deg) translateZ(300px);}*/
+        /*.card:nth-child(3){transform: rotateY(120deg) translateZ(300px);}*/
         /*.back:nth-child(6){transform: rotateY(120deg) translateZ(300px);}*/
-        /*.item:nth-child(4){transform: rotateY(180deg) translateZ(300px);}*/
+        /*.card:nth-child(4){transform: rotateY(180deg) translateZ(300px);}*/
         /*.back:nth-child(8){transform: rotateY(180deg) translateZ(300px);}*/
-        /*.item:nth-child(5){transform: rotateY(240deg) translateZ(300px);}*/
+        /*.card:nth-child(5){transform: rotateY(240deg) translateZ(300px);}*/
         /*.back:nth-child(10){transform: rotateY(240deg) translateZ(300px);}*/
-        /*.item:nth-child(6){transform: rotateY(300deg) translateZ(300px);}*/
+        /*.card:nth-child(6){transform: rotateY(300deg) translateZ(300px);}*/
         /*.back:nth-child(12){transform: rotateY(300deg) translateZ(300px);}*/
-
-        @keyframes rotate{
-            from {transform: rotateX(-20deg) rotateY(0deg);}
-            to{ transform: rotateX(-20deg) rotateY(360deg);}
-        }
 
     </style>
 </head>
 <body>
     <div class="container">
         <div class="axis">
-            <div class="item">
+            <div class="card">
                 <!--<img src="minions.gif">-->
             </div>
             <div class="back"></div>
 
-            <!--<div class="item"></div>-->
+            <!--<div class="card"></div>-->
             <!--<div class="back"></div>-->
-            <!--<div class="item"></div>-->
+            <!--<div class="card"></div>-->
             <!--<div class="back"></div>-->
-            <!--<div class="item"></div>-->
+            <!--<div class="card"></div>-->
             <!--<div class="back"></div>-->
-            <!--<div class="item"></div>-->
+            <!--<div class="card"></div>-->
             <!--<div class="back"></div>-->
-            <!--<div class="item"></div>-->
+            <!--<div class="card"></div>-->
             <!--<div class="back"></div>-->
         </div>
     </div>
