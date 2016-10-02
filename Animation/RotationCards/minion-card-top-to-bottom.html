@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*뒤로 갈때 앞쪽 폭이 좁아져야 함.
+        앞으로 나올때 앞쪽 폭이 넓어져야 함.
+        뒤로 가있는 카드는 전체가 작아져야 함. scale 낮아져야함.
+        축의 왼쪽이 앞쪽으로 나오고 오른쪽이 뒤로 가게 하려면?*/
+        body{
+            margin: 0;
+        }
+
+        .container{
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          top: 50%;
+          left: 50%;
+          background: #f00;
+          transform: translate(-50%, -50%); 
+        }
+
+         @keyframes rotate{
+            from {transform: rotateX(0deg) rotateY(0deg);}
+            to{ transform: rotateX(360deg) rotateY(360deg);}
+        }
+
+        .axis{
+            position: absolute;
+            top: 50%;
+            left: -50%;
+            
+            background: #5a4;
+            width: 200px;
+            height: 5px;
+            transform-style:preserve-3d;
+            animation: rotate 5s infinite linear;
+            /*transform-origin: 50% 0;*/
+            perspective: 150px;
+            perspective-origin: 10% 10%;
+        }
+
+        .card{
+            /*띄워야 겹칩*/
+            position: absolute;            
+            width: 200px;
+            height: 200px;
+            background: url("images/minions.gif");
+            z-index: 100;
+            /*backface-visibility: hidden;*/
+        }
+        /*.card::before{
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: black;
+            position: absolute;
+            z-index: 10;
+        }*/
+        .back{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: black;
+        }
+
+        .card:nth-child(1){transform: rotateX(0deg) translateZ(200px);}
+        .back:nth-child(2){transform: rotateX(0deg) translateZ(200px);}
+        /*.card:nth-child(1)::after{transform: rotateY(0deg) translateZ(300px;)}*/
+        
+        
+        /*.card:nth-child(3){transform: rotateX(60deg) translateZ(200px);}*/
+        /*.back:nth-child(4){transform: rotateY(60deg) translateZ(300px);}*/
+        /*.card:nth-child(4){transform: rotateX(120deg) translateZ(200px);}*/
+        /*.back:nth-child(6){transform: rotateY(120deg) translateZ(300px);}*/
+        .card:nth-child(3){transform: rotateX(120deg) translateZ(200px);}
+        .back:nth-child(4){transform: rotateX(120deg) translateZ(200px);}
+        /*.card:nth-child(6){transform: rotateX(240deg) translateZ(200px);}*/
+        /*.back:nth-child(10){transform: rotateY(240deg) translateZ(300px);}*/
+        /*.card:nth-child(7){transform: rotateX(300deg) translateZ(200px);}*/
+        /*.back:nth-child(12){transform: rotateY(300deg) translateZ(300px);}*/
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="axis">
+            <!--<div class="card">-->
+                <!--<img src="minions.gif">-->
+            </div>
+            <!--<div class="back"></div>-->
+
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+        </div>
+    </div>
+</body>
+</html>
