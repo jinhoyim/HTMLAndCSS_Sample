@@ -1,2 +1,2 @@
-# HTMLAndCSS_Sample
-HTML & CSS 샘플 코드.
+# HTMLCSSSample
+HTML&CSS 샘플 코드.
