@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .container{
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          top: 50%;
+          left: 50%;
+          background: #f00;
+          transform: translate(-50%, -50%); 
+        }
+
+         @keyframes rotate{
+            from {transform: rotateX(-20deg) rotateY(0deg);}
+            to{ transform: rotateX(-20deg) rotateY(360deg);}
+        }
+
+        .axis{
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            
+            background: #5a4;
+            width: 5px;
+            height: 200px;
+            transform-style:preserve-3d;
+            animation: rotate 5s infinite linear;
+        }
+
+        .card{
+            /*띄워야 겹칩*/
+            position: absolute;
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            background: url("images/minions.gif");
+            z-index: 100;
+            /*backface-visibility: hidden;*/
+        }
+        /*.card::before{
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: black;
+            position: absolute;
+            z-index: 10;
+        }*/
+        .back{
+            position: absolute;
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            background: black;
+        }
+
+        .card:nth-child(1){transform: rotateY(0deg) translateZ(200px);}
+        .back:nth-child(2){transform: rotateY(0deg) translateZ(200px);}
+        /*.card:nth-child(1)::after{transform: rotateY(0deg) translateZ(300px;)}*/
+        
+        
+        /*.card1:nth-child(2){transform: rotateY(180deg) translateZ(200px);}*/
+        /*.back:nth-child(4){transform: rotateY(60deg) translateZ(300px);}*/
+        /*.card:nth-child(3){transform: rotateY(120deg) translateZ(300px);}*/
+        /*.back:nth-child(6){transform: rotateY(120deg) translateZ(300px);}*/
+        /*.card:nth-child(4){transform: rotateY(180deg) translateZ(300px);}*/
+        /*.back:nth-child(8){transform: rotateY(180deg) translateZ(300px);}*/
+        /*.card:nth-child(5){transform: rotateY(240deg) translateZ(300px);}*/
+        /*.back:nth-child(10){transform: rotateY(240deg) translateZ(300px);}*/
+        /*.card:nth-child(6){transform: rotateY(300deg) translateZ(300px);}*/
+        /*.back:nth-child(12){transform: rotateY(300deg) translateZ(300px);}*/
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="axis">
+            <div class="card">
+                <!--<img src="minions.gif">-->
+            </div>
+            <div class="back"></div>
+
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+        </div>
+    </div>
+</body>
+</html>
