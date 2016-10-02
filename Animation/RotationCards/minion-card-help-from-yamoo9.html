@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .container{
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          top: 45%;
+          left: 50%;
+          background: #f00;
+          transform: translate(-50%, -50%); 
+
+          /*야무님 추가코드*/
+          perspective: 450px;
+          background; #ffd219;
+          border-radius: 50%;
+          
+        }
+
+        .axis{
+            position: absolute;
+            top: -70%;
+            left: 50%;
+            
+            background: #3a0099;
+            width: 1px;
+            height: 100px;
+            transform-style:preserve-3d;
+            /*animation: rotate 3s infinite linear;*/
+            animation: rotate 3s infinite cubic-bezier(0.68, -0.25, 0.21, 1.24)
+        }
+
+         @keyframes rotate{
+            0% {
+                transform: rotateX(5deg) rotateY(0deg);
+            }
+            100% { 
+                transform: rotateX(5deg) rotateY(360deg);
+            }
+        }
+
+        .card{
+            /*띄워야 겹칩*/
+            /*position: absolute;*/
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            background: url("images/minions.gif");
+            transform-style: preserve-3d;
+            transform: translateZ(200px);
+            /*z-index: 100;*/
+            backface-visibility: hidden;
+        }
+        .card::before{
+            content: "";
+            position: absolute;
+            /*width: 100px;*/
+            /*height: 100px;*/
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: black;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            /*z-index: 10;*/
+        }
+        /*.back{
+            position: absolute;
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            background: black;
+        }*/
+
+        .card:nth-child(1){transform: rotateY(0deg) translateZ(200px);}
+        /*.back:nth-child(2){transform: rotateY(0deg) translateZ(200px);}*/
+        /*.card:nth-child(1)::after{transform: rotateY(0deg) translateZ(300px;)}*/
+        
+        
+        /*.card1:nth-child(2){transform: rotateY(180deg) translateZ(200px);}*/
+        /*.back:nth-child(4){transform: rotateY(60deg) translateZ(300px);}*/
+        /*.card:nth-child(3){transform: rotateY(120deg) translateZ(300px);}*/
+        /*.back:nth-child(6){transform: rotateY(120deg) translateZ(300px);}*/
+        /*.card:nth-child(4){transform: rotateY(180deg) translateZ(300px);}*/
+        /*.back:nth-child(8){transform: rotateY(180deg) translateZ(300px);}*/
+        /*.card:nth-child(5){transform: rotateY(240deg) translateZ(300px);}*/
+        /*.back:nth-child(10){transform: rotateY(240deg) translateZ(300px);}*/
+        /*.card:nth-child(6){transform: rotateY(300deg) translateZ(300px);}*/
+        /*.back:nth-child(12){transform: rotateY(300deg) translateZ(300px);}*/
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="axis">
+            <div class="card"></div>
+            <!--<div class="back"></div>-->
+
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+            <!--<div class="card"></div>-->
+            <!--<div class="back"></div>-->
+        </div>
+    </div>
+</body>
+</html>
