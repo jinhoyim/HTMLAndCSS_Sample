@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Restart Failed</title>
+    <style>
+        .menu{
+            width: 200px;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+
+            animation: ani 2s ease none 1 normal paused;
+        }
+
+        @keyframes ani{
+            0%{
+                margin-left: 0px;
+            }
+            100%{
+                margin-left: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        Menu
+    </div>
+    <button class="btn">play</button>
+    <script>
+        var btn = document.querySelector('.btn');
+        var menu = document.querySelector('.menu');
+        menu.addEventListener('animationstart', listener, false);
+        menu.addEventListener('animationend', listener, false);
+        menu.addEventListener('animationiteration', listener, false);
+
+        function listener(e){
+            switch(e.type)
+            {
+                case 'animationend':
+                    //실패! 리셋 안됨.
+                    menu.style.animationPlayState = 'paused';
+                    menu.style.animationIterationCount = 1;
+                    break;
+            }
+        }
+
+        btn.onclick = function(){
+            menu.style.animationPlayState = 'running';
+        }
+
+        
+    </script>
+</body>
+</html>
