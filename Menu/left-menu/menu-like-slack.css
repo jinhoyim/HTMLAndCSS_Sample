@@ -47,7 +47,7 @@ h1{
   background: #33aa33;
   top: 0;
   left: -100;
-  min-height: 100vh;
+  height: 100vh;
   width: 300px;
   z-index: 10;
   margin-left: 0px;
@@ -79,6 +79,6 @@ h1{
 .left-panel{
   float: left;
   width: 150px;
-  min-height: 100vh;
-  padding-bottom: 50px;
+  height: 100vh;
+  overflow-y: auto;
 }
