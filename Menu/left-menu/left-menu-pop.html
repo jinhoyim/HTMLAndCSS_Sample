@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Left menu pop</title>
+  <link rel="stylesheet" href="left-menu-pop.css">
+</head>
+<body>
+  <main class="main">
+  <header>
+    <h1>Header</h1>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Menu1</li>
+        <li>Menu2</li>
+        <li>Menu3</li>
+        <li>Menu4</li>
+      </ul>
+    </nav>
+  </header>
+  <section class="contents">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quos, quia quam non id aspernatur. Ea reiciendis similique dicta eius veritatis expedita rerum iste earum consequatur placeat accusantium minus dolorum, neque ipsum. Magnam, mollitia vitae nemo culpa deleniti, aliquid temporibus veritatis veniam saepe eum laboriosam corporis tempora quibusdam ullam. Libero error illum dolorem consectetur nihil omnis asperiores, dolorum, provident, quaerat odio at tenetur nostrum placeat facere adipisci sunt mollitia. Sit in corporis fugit itaque ipsum magnam harum eum, adipisci recusandae rerum voluptatem quidem enim, eveniet at! Molestiae porro dolore laborum sapiente quisquam cupiditate, eveniet. Impedit aut expedita sint, exercitationem temporibus!</p>
+    <button class="btn-left-menu">open left menu</button>
+
+  </section>
+  </main>
+  <div class="side-menu ">
+    <ul class="reset-list">
+      <li>Home</li>
+      <li>Menu1</li>
+      <li>Menu2</li>
+      <li>Menu3</li>
+      <li>Menu4</li>
+    </ul>
+    <button class="btn-close-left-menu">close</button>
+  </div>
+  <script>
+    var btn_left = document.querySelector('.btn-left-menu');
+    var btn_close_left = document.querySelector('.btn-close-left-menu');
+    var side_menu = document.querySelector('.side-menu');
+
+    btn_left.onclick = function(){
+      //console.log(window.getComputedStyle(side_menu).animationPlayState);
+      // side_menu.style.animationDirection = 'normal';
+      // side_menu.classList.remove('.side-menu-normal-reverse');
+      // side_menu.classList.add('.side-menu-normal');
+      // side_menu.style.animationPlayState = 'running';
+      // console.log(window.getComputedStyle(side_menu).animationPlayState);
+      // side_menu.classList.remove('side-menu');
+      side_menu.classList.add('side-menu-opened');
+    };
+
+    btn_close_left.onclick = function(){
+      side_menu.classList.remove('side-menu-opened');
+      // side_menu.classList.remove('.side-menu-normal');
+      // side_menu.classList.add('.side-menu-normal-reverse');
+      // console.log(window.getComputedStyle(side_menu).animationPlayState);
+      // side_menu.style.animationDirection = 'reverse';
+      // side_menu.style.animationPlayState = 'running';
+      // side_menu.style.animationPlayState = 'running';
+    }
+
+  </script>
+</body>
+</html>

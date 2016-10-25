@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Left menu like slack </title>
+  <link rel="stylesheet" href="menu-like-slack.css">
+</head>
+<body>
+  <div class="wrapper">
+    <main class="main">
+    <header>
+      <h1>Header</h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Menu1</li>
+          <li>Menu2</li>
+          <li>Menu3</li>
+          <li>Menu4</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contents">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat pariatur quam sapiente asperiores nemo enim sed sint fugit illum doloremque ullam rem a esse atque vitae nostrum eos saepe necessitatibus quos quisquam minima, placeat deleniti, recusandae? Sapiente dolor iusto iure at maiores ab, itaque eos fuga unde voluptas sint debitis est sequi id cumque hic ratione sed assumenda facere sit magnam aliquam cupiditate corrupti culpa. Vero vitae at doloribus veniam ullam animi, eius sint laudantium hic nesciunt error delectus odit, accusamus, sed voluptatum dolores rem repellendus ut, possimus repellat? Voluptatem illo nesciunt amet sequi ratione hic porro dolore soluta temporibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat pariatur quam sapiente asperiores nemo enim sed sint fugit illum doloremque ullam rem a esse atque vitae nostrum eos saepe necessitatibus quos quisquam minima, placeat deleniti, recusandae? Sapiente dolor iusto iure at maiores ab, itaque eos fuga unde voluptas sint debitis est sequi id cumque hic ratione sed assumenda facere sit magnam aliquam cupiditate corrupti culpa. Vero vitae at doloribus veniam ullam animi, eius sint laudantium hic nesciunt error delectus odit, accusamus, sed voluptatum dolores rem repellendus ut, possimus repellat? Voluptatem illo nesciunt amet sequi ratione hic porro dolore soluta temporibus.</p>
+      <button class="btn-left-menu">open left menu</button>
+      <button class="btn-right-menu">open right menu</button>
+
+    </section>
+    </main>
+  </div>
+  <div class="left-side-menu">
+    <div class="left-panel-1 left-panel">
+      <ul class="reset-list">
+        <li>Home</li>
+        <li>Menu1</li>
+        <li>Menu2</li>
+        <li>Menu3</li>
+        <li>Menu4</li>
+      </ul>
+    </div>
+    <div class="left-panel-2 left-panel">
+      <p>Left 2</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fugiat eos, alias et ad enim sed qui repudiandae facere neque incidunt nobis tenetur necessitatib Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fugiat eos, alias et ad enim sed qui repudiandae facere neque incidunt nobis tenetur necessitatib Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fugiat eos, alias et ad enim sed qui repudiandae facere neque incidunt nobis tenetur necessitatib Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fugiat eos, alias et ad enim sed qui repudiandae facere neque incidunt nobis tenetur necessitatib Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fugiat eos, alias et ad enim sed qui repudiandae facere neque incidunt nobis tenetur necessitatib Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fugiat eos, alias et ad enim sed qui repudiandae facere neque incidunt nobis tenetur necessitatib Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, fugiat eos, alias et ad enim sed qui repudiandae facere neque incidunt nobis tenetur necessitatib</p>
+    </div>
+    <div class="btn-left-wrapper">
+      <button class="btn-close-left-menu">close</button>
+      <button class="btn-left-1">1</button>
+      <button class="btn-left-2">2</button>
+    </div>
+  </div>
+  <div class="right-side-menu">
+    <ul class="reset-list">
+      <li>Home</li>
+      <li>Menu1</li>
+      <li>Menu2</li>
+      <li>Menu3</li>
+      <li>Menu4</li>
+    </ul>
+    <button class="btn-close-right-menu">close</button>
+  </div>
+  <script>
+    var btn_left = document.querySelector('.btn-left-menu');
+    var btn_right = document.querySelector('.btn-right-menu');
+    var btn_close_left = document.querySelector('.btn-close-left-menu');
+    var btn_close_right = document.querySelector('.btn-close-right-menu');
+
+    var btn_left_1 = document.querySelector('.btn-left-1');
+    var btn_left_2 = document.querySelector('.btn-left-2');
+    var left_side_menu = document.querySelector('.left-side-menu');
+
+    var wrapper = document.querySelector('.wrapper');
+
+    btn_left.onclick = function(){
+      if(wrapper.classList.contains('show-right')){
+        wrapper.classList.remove('show-right');
+      }
+      wrapper.classList.add('show-left');
+    };
+
+    btn_close_left.onclick = function(){
+      wrapper.classList.remove('show-left');
+    }
+
+    btn_right.onclick = function(){
+      if(wrapper.classList.contains('show-left')){
+        wrapper.classList.remove('show-left');
+      }
+      wrapper.classList.add('show-right');
+    };
+
+    btn_close_right.onclick = function(){
+      wrapper.classList.remove('show-right');
+    }
+
+    btn_left_1.onclick = function(){
+      left_side_menu.classList.remove('right');
+    }
+
+    btn_left_2.onclick = function(){
+      left_side_menu.classList.add('right');
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Left menu</title>
+  <link rel="stylesheet" href="left-menu.css">
+</head>
+<body>
+  <div class="wrapper">
+    <main class="main">
+    <header>
+      <h1>Header</h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Menu1</li>
+          <li>Menu2</li>
+          <li>Menu3</li>
+          <li>Menu4</li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contents">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat pariatur quam sapiente asperiores nemo enim sed sint fugit illum doloremque ullam rem a esse atque vitae nostrum eos saepe necessitatibus quos quisquam minima, placeat deleniti, recusandae? Sapiente dolor iusto iure at maiores ab, itaque eos fuga unde voluptas sint debitis est sequi id cumque hic ratione sed assumenda facere sit magnam aliquam cupiditate corrupti culpa. Vero vitae at doloribus veniam ullam animi, eius sint laudantium hic nesciunt error delectus odit, accusamus, sed voluptatum dolores rem repellendus ut, possimus repellat? Voluptatem illo nesciunt amet sequi ratione hic porro dolore soluta temporibus.</p>
+      <button class="btn-left-menu">open left menu</button>
+
+    </section>
+    </main>
+    <div class="side-menu ">
+      <ul class="reset-list">
+        <li>Home</li>
+        <li>Menu1</li>
+        <li>Menu2</li>
+        <li>Menu3</li>
+        <li>Menu4</li>
+      </ul>
+      <button class="btn-close-left-menu">close</button>
+    </div>
+  </div>
+  <script>
+    var btn_left = document.querySelector('.btn-left-menu');
+    var btn_close_left = document.querySelector('.btn-close-left-menu');
+    var wrapper = document.querySelector('.wrapper');
+
+    btn_left.onclick = function(){
+      //console.log(window.getComputedStyle(side_menu).animationPlayState);
+      // side_menu.style.animationDirection = 'normal';
+      // side_menu.classList.remove('.side-menu-normal-reverse');
+      // side_menu.classList.add('.side-menu-normal');
+      // side_menu.style.animationPlayState = 'running';
+      // console.log(window.getComputedStyle(side_menu).animationPlayState);
+      // side_menu.classList.remove('side-menu');
+      wrapper.classList.add('show');
+    };
+
+    btn_close_left.onclick = function(){
+      wrapper.classList.remove('show');
+      // side_menu.classList.remove('.side-menu-normal');
+      // side_menu.classList.add('.side-menu-normal-reverse');
+      // console.log(window.getComputedStyle(side_menu).animationPlayState);
+      // side_menu.style.animationDirection = 'reverse';
+      // side_menu.style.animationPlayState = 'running';
+      // side_menu.style.animationPlayState = 'running';
+    }
+
+  </script>
+</body>
+</html>

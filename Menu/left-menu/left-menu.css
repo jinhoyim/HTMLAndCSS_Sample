@@ -1,0 +1,70 @@
+body{
+  margin: 0;
+}
+
+h1{
+  margin: 0;
+}
+
+.contents{
+  width: 100%;
+}
+
+.wrapper{
+  position: relative;
+  background: #bbf;
+  transition: margin-left 0.5s cubic-bezier(0.25, 0.04, 0, 0.95);
+  margin-left: -150px;
+}
+
+.wrapper.show{
+  margin-left: 0px;
+  transition: margin-left 0.5s cubic-bezier(0.25, 0.04, 0, 0.95);
+}
+
+
+.main{
+  margin-left: 150px;
+  background: #aa0;
+}
+
+
+.reset-list{
+  list-style-type: none;
+}
+
+.side-menu{
+  position: absolute;
+  background: #c3c3c3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+}
+
+
+
+/*
+.side-menu{
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #c3c3c3;
+  margin-left: -150px;
+  transition: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.25, 0.04, 0, 0.95);
+}
+
+.side-menu-opened{
+  margin-left: 0px;
+  transition: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.25, 0.04, 0, 0.95);
+}*/
+
+.side-menu li{
+  background: #ccc;
+}
